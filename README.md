@@ -1,4 +1,4 @@
-BBEdit Codeless Language Module for Xcode .pbxproj files
+BBEdit Codeless Language Module for Swift
 ==============================
 
 This is a [BBEdit](http://www.barebones.com/products/bbedit/index.html) and
