@@ -105,6 +105,21 @@
 		<string>__FUNCTION__</string>
 		<string>@IBOutlet</string>
 		<string>@IBAction</string>
+		<string>@IBDesignable</string>
+		<string>@IBInspectable</string>
+		<string>@autoclosure</string>
+		<string>@available</string>
+		<string>@objc</string>
+		<string>@noescape</string>
+		<string>@nonobjc</string>
+		<string>@noreturn</string>
+		<string>@NSApplicationMain</string>
+		<string>@NSCopying</string>
+		<string>@NSManaged</string>
+		<string>@testable</string>
+		<string>@UIApplicationMain</string>
+		<string>@warn_unused_result</string>
+		<string>@convention</string>
 	</array>
 	<key>BBLMPredefinedNameList</key>
 	<array>
