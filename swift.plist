@@ -38,6 +38,7 @@
 		<string>catch</string>
 		<string>import</string>
 		<string>typealias</string>
+		<string>associatedtype</string>
 		<string>struct</string>
 		<string>class</string>
 		<string>enum</string>
@@ -59,7 +60,9 @@
 		<string>postfix</string>
 		<string>infix</string>
 		<string>operator</string>
-		<string>precedence­</string>
+		<string>precedencegroup</string>
+		<string>higherThan</string>
+		<string>lowerThan</string>
 		<string>associativity</string>
 		<string>left</string>
 		<string>right</string>
@@ -75,34 +78,45 @@
 		<string>required</string>
 		<string>static</string>
 		<string>unowned</string>
-		<string>safe</string>
-		<string>unsafe</string>
+		<string>unowned(safe)</string>
+		<string>unowned(unsafe)</string>
 		<string>weak</string>
-		<string>internal</string>
 		<string>private</string>
+		<string>private(set)</string>
+		<string>fileprivate</string>
+		<string>fileprivate(set)</string>
+		<string>internal</string>
+		<string>internal(set)</string>
 		<string>public</string>
+		<string>public(set)</string>
+		<string>open</string>
+		<string>open(set)</string>
 		<string>is</string>
 		<string>as</string>
 		<string>try</string>
 		<string>self</string>
 		<string>super</string>
-		<string>dynamicType</string>
 		<string>true</string>
 		<string>false</string>
 		<string>nil</string>
 		<string>Type</string>
 		<string>Protocol</string>
 		<string>Self</string>
-		<string>Type</string>		
 		<string>#available</string>
 		<string>#if</string>
 		<string>#else</string>
 		<string>#endif</string>
 		<string>#line</string>
-		<string>__FILE__</string>
-		<string>__LINE__</string>
-		<string>__COLUMN__</string>
-		<string>__FUNCTION__</string>
+		<string>#file</string>
+		<string>#line</string>
+		<string>#column</string>
+		<string>#function</string>
+		<string>#sourceLocation</string>
+		<string>#colorLiteral</string>
+		<string>#fileLiteral</string>
+		<string>#imageLiteral</string>
+		<string>#selector</string>
+		<string>#keyPath</string>
 		<string>@IBOutlet</string>
 		<string>@IBAction</string>
 		<string>@IBDesignable</string>
@@ -110,194 +124,212 @@
 		<string>@autoclosure</string>
 		<string>@available</string>
 		<string>@objc</string>
-		<string>@noescape</string>
+		<string>@escaping</string>
 		<string>@nonobjc</string>
-		<string>@noreturn</string>
 		<string>@NSApplicationMain</string>
 		<string>@NSCopying</string>
 		<string>@NSManaged</string>
 		<string>@testable</string>
 		<string>@UIApplicationMain</string>
-		<string>@warn_unused_result</string>
+		<string>@discardableResult</string>
 		<string>@convention</string>
 	</array>
 	<key>BBLMPredefinedNameList</key>
 	<array>
 		<!-- Structs -->
 		<string>AnyBidirectionalCollection</string>
-		<string>AnyBidirectionalIndex</string>
-		<string>AnyForwardCollection</string>
-		<string>AnyForwardIndex</string>
+		<string>AnyCollection</string>
+		<string>AnyHashable</string>
+		<string>AnyIndex</string>
+		<string>AnyIterator</string>
 		<string>AnyRandomAccessCollection</string>
-		<string>AnyRandomAccessIndex</string>
 		<string>AnySequence</string>
 		<string>Array</string>
 		<string>ArraySlice</string>
 		<string>AutoreleasingUnsafeMutablePointer</string>
+		<string>BidirectionalSlice</string>
 		<string>Bool</string>
-		<string>COpaquePointer</string>
-		<string>CVaListPointer</string>
 		<string>Character</string>
-		<string>ClosedInterval</string>
+		<string>ClosedRange</string>
+		<string>ClosedRangeIndex</string>
+		<string>ClosedRangeIterator</string>
 		<string>CollectionOfOne</string>
 		<string>ContiguousArray</string>
+		<string>CountableClosedRange</string>
+		<string>CountableRange</string>
+		<string>CVAListPointer</string>
+		<string>DefaultBidirectionalIndices</string>
+		<string>DefaultIndices</string>
 		<string>Dictionary</string>
-		<string>DictionaryGenerator</string>
 		<string>DictionaryIndex</string>
+		<string>DictionaryIterator</string>
 		<string>DictionaryLiteral</string>
 		<string>Double</string>
 		<string>EmptyCollection</string>
-		<string>EmptyGenerator</string>
-		<string>EnumerateGenerator</string>
-		<string>EnumerateSequence</string>
+		<string>EmptyIterator</string>
+		<string>EnumeratedIterator</string>
+		<string>EnumeratedSequence</string>
 		<string>FlattenBidirectionalCollection</string>
 		<string>FlattenBidirectionalCollectionIndex</string>
 		<string>FlattenCollection</string>
 		<string>FlattenCollectionIndex</string>
-		<string>FlattenGenerator</string>
+		<string>FlattenIterator</string>
 		<string>FlattenSequence</string>
 		<string>Float</string>
-		<string>GeneratorOfOne</string>
-		<string>GeneratorSequence</string>
-		<string>HalfOpenInterval</string>
-		<string>IndexingGenerator</string>
+		<string>Float80</string>
+		<string>IndexingIterator</string>
 		<string>Int</string>
 		<string>Int16</string>
 		<string>Int32</string>
 		<string>Int64</string>
 		<string>Int8</string>
-		<string>JoinGenerator</string>
-		<string>JoinSequence</string>
+		<string>IteratorOverOne</string>
+		<string>IteratorSequence</string>
+		<string>JoinedIterator</string>
+		<string>JoinedSequence</string>
+		<string>LazyBidirectionalCollection</string>
 		<string>LazyCollection</string>
+		<string>LazyFilterBidirectionalCollection</string>
 		<string>LazyFilterCollection</string>
-		<string>LazyFilterGenerator</string>
 		<string>LazyFilterIndex</string>
+		<string>LazyFilterIterator</string>
 		<string>LazyFilterSequence</string>
+		<string>LazyMapBidirectionalCollection</string>
 		<string>LazyMapCollection</string>
-		<string>LazyMapGenerator</string>
+		<string>LazyMapIterator</string>
+		<string>LazyMapRandomAccessCollection</string>
 		<string>LazyMapSequence</string>
+		<string>LazyRandomAccessCollection</string>
 		<string>LazySequence</string>
 		<string>ManagedBufferPointer</string>
 		<string>Mirror</string>
+		<string>MutableBidirectionalSlice</string>
+		<string>MutableRandomAccessSlice</string>
+		<string>MutableRangeReplaceableBidirectionalSlice</string>
+		<string>MutableRangeReplaceableRandomAccessSlice</string>
+		<string>MutableRangeReplaceableSlice</string>
 		<string>MutableSlice</string>
 		<string>ObjectIdentifier</string>
-		<string>PermutationGenerator</string>
+		<string>OpaquePointer</string>
+		<string>RandomAccessSlice</string>
 		<string>Range</string>
-		<string>RangeGenerator</string>
-		<string>RawByte</string>
-		<string>Repeat</string>
-		<string>ReverseCollection</string>
-		<string>ReverseIndex</string>
-		<string>ReverseRandomAccessCollection</string>
-		<string>ReverseRandomAccessIndex</string>
+		<string>RangeReplaceableBidirectionalSlice</string>
+		<string>RangeReplaceableRandomAccessSlice</string>
+		<string>RangeReplaceableSlice</string>
+		<string>Repeated</string>
+		<string>ReversedCollection</string>
+		<string>ReversedIndex</string>
+		<string>ReversedRandomAccessCollection</string>
+		<string>ReversedRandomAccessIndex</string>
 		<string>Set</string>
-		<string>SetGenerator</string>
 		<string>SetIndex</string>
+		<string>SetIterator</string>
 		<string>Slice</string>
 		<string>StaticString</string>
 		<string>StrideThrough</string>
-		<string>StrideThroughGenerator</string>
+		<string>StrideThroughIterator</string>
 		<string>StrideTo</string>
-		<string>StrideToGenerator</string>
+		<string>StrideToIterator</string>
 		<string>String</string>
 		<string>CharacterView</string>
-		<string>CharacterView.Index</string>
 		<string>UTF16View</string>
-		<string>UTF16View.Index</string>
 		<string>UTF8View</string>
-		<string>UTF8View.Index</string>
 		<string>UnicodeScalarView</string>
-		<string>Generator</string>
+		<string>Iterator</string>
 		<string>Index</string>
+		<string>Indices</string>
 		<string>UInt</string>
 		<string>UInt16</string>
 		<string>UInt32</string>
 		<string>UInt64</string>
 		<string>UInt8</string>
-		<string>UTF16</string>
-		<string>UTF32</string>
-		<string>UTF8</string>
+		<string>UnfoldSequence</string>
 		<string>UnicodeScalar</string>
 		<string>Unmanaged</string>
 		<string>UnsafeBufferPointer</string>
-		<string>UnsafeBufferPointerGenerator</string>
+		<string>UnsafeBufferPointerIterator</string>
 		<string>UnsafeMutableBufferPointer</string>
 		<string>UnsafeMutablePointer</string>
+		<string>UnsafeMutableRawPointer</string>
 		<string>UnsafePointer</string>
-		<string>Zip2Generator</string>
+		<string>UnsafeRawPointer</string>
+		<string>UTF16</string>
+		<string>UTF32</string>
+		<string>UTF8</string>
+		<string>Zip2Iterator</string>
 		<string>Zip2Sequence</string>
 		<!-- Enumerations -->
-		<string>Bit</string>
+		<string>CommandLine</string>
 		<string>FloatingPointClassification</string>
+		<string>FloatingPointRoundingRule</string>
+		<string>FloatingPointSign</string>
 		<string>ImplicitlyUnwrappedOptional</string>
+		<string>MemoryLayout</string>
 		<string>AncestorRepresentation</string>
 		<string>DisplayStyle</string>
+		<string>Never</string>
 		<string>Optional</string>
 		<string>PlaygroundQuickLook</string>
-		<string>Process</string>
 		<string>UnicodeDecodingResult</string>
 		<!-- Classes -->
-		<string>AnyGenerator</string>
-		<string>NonObjectiveCBase</string>
-		<string>ManagedProtoBuffer</string>
 		<string>ManagedBuffer</string>
-		<string>VaListBuilder</string>
 		<!-- Protocols -->
+		<string>_Incrementable</string>
 		<string>AbsoluteValuable</string>
-		<string>AnyCollectionType</string>
 		<string>AnyObject</string>
-		<string>ArrayLiteralConvertible</string>
-		<string>BidirectionalIndexType</string>
-		<string>BitwiseOperationsType</string>
-		<string>BooleanLiteralConvertible</string>
-		<string>BooleanType</string>
-		<string>CVarArgType</string>
-		<string>CollectionType</string>
+		<string>BidirectionalCollection</string>
+		<string>BidirectionalIndexable/string>
+		<string>BinaryFloatingPoint</string>
+		<string>BitwiseOperations</string>
+		<string>Collection</string>
 		<string>Comparable</string>
 		<string>CustomDebugStringConvertible</string>
 		<string>CustomLeafReflectable</string>
 		<string>CustomPlaygroundQuickLookable</string>
 		<string>CustomReflectable</string>
 		<string>CustomStringConvertible</string>
-		<string>DictionaryLiteralConvertible</string>
+		<string>CVarArg</string>
 		<string>Equatable</string>
-		<string>ErrorType</string>
-		<string>ExtendedGraphemeClusterLiteralConvertible</string>
-		<string>FloatLiteralConvertible</string>
-		<string>FloatingPointType</string>
-		<string>ForwardIndexType</string>
-		<string>GeneratorType</string>
+		<string>Error</string>
+		<string>ExpressibleByArrayLiteral</string>
+		<string>ExpressibleByBooleanLiteral</string>
+		<string>ExpressibleByDictionaryLiteral</string>
+		<string>ExpressibleByLiteral</string>
+		<string>ExpressibleByExtendedGraphemeClusterLiteral</string>
+		<string>ExpressibleByFloatLiteral</string>
+		<string>ExpressibleByIntegerLiteral</string>
+		<string>ExpressibleByNilLiteral</string>
+		<string>ExpressibleByStringInterpolation</string>
+		<string>ExpressibleByStringLiteral</string>
+		<string>ExpressibleByUnicodeScalarLiteral</string>
+		<string>FloatingPoint</string>
 		<string>Hashable</string>
 		<string>Indexable</string>
-		<string>IntegerArithmeticType</string>
-		<string>IntegerLiteralConvertible</string>
-		<string>IntegerType</string>
-		<string>IntervalType</string>
-		<string>LazyCollectionType</string>
-		<string>LazySequenceType</string>
-		<string>MirrorPathType</string>
-		<string>MutableCollectionType</string>
+		<string>IndexableBase</string>
+		<string>Integer</string>
+		<string>IntegerArithmetic</string>
+		<string>IteratorProtocol</string>
+		<string>LazyCollectionProtocol</string>
+		<string>LazySequenceProtocol</string>
+		<string>LosslessStringConvertible</string>
+		<string>MirrorPath</string>
+		<string>MutableCollection</string>
 		<string>MutableIndexable</string>
-		<string>MutableSliceable</string>
-		<string>NilLiteralConvertible</string>
-		<string>OptionSetType</string>
-		<string>OutputStreamType</string>
-		<string>RandomAccessIndexType</string>
-		<string>RangeReplaceableCollectionType</string>
+		<string>OptionSet</string>
+		<string>RandomAccessCollection</string>
+		<string>RandomAccessIndexable</string>
+		<string>RangeReplaceableCollection</string>
+		<string>RangeReplaceableIndexable</string>
 		<string>RawRepresentable</string>
-		<string>ReverseIndexType</string>
-		<string>SequenceType</string>
-		<string>SetAlgebraType</string>
-		<string>SignedIntegerType</string>
-		<string>SignedNumberType</string>
-		<string>Streamable</string>
+		<string>Sequence</string>
+		<string>SetAlgebra</string>
+		<string>SignedInteger</string>
+		<string>SignedNumber</string>
 		<string>Strideable</string>
-		<string>StringInterpolationConvertible</string>
-		<string>StringLiteralConvertible</string>
-		<string>UnicodeCodecType</string>
-		<string>UnicodeScalarLiteralConvertible</string>
-		<string>UnsignedIntegerType</string>
-		<string>_Incrementable</string>
+		<string>TextOutputStream</string>
+		<string>TextOutputStreamable</string>
+		<string>UnicodeCodec</string>
+		<string>UnsignedInteger</string>
 	</array>
 	<key>BBLMSuffixMap</key>
 	<array>
